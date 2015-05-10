@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  p {
+      padding: 2.0em;
+    }
+  </style>
+  <title>SurveyProject</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <link rel="stylesheet" type="text/css" href="https://bootswatch.com/paper/bootstrap.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<!-- Page Header -->
+<div class="page-header">
+  <h1>My New Pilot Program <small><%= yield :subtitle %></small></h1>
+</div>
+<!-- End Page Header -->
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="http://localhost:3000/login">Log-In</a></li>
+
+        <!-- This page should only be seen by the Admin -->
+        <li><a href="http://localhost:3000/admin/homepage">Admin Homepage</a></li>
+
+        <!-- this page should only be seen by the Advisor -->
+        <li><a href="http://localhost:3000/advisor/homepage">Advisor Homepage</a></li>
+
+        <li><a href="http://localhost:3000/advisor/survey">Log a Call</a></li>
+
+        <!-- Delete before submitting final copy-->
+        <li><a href="http://localhost:3000/advisor/submissioncomplete">Submission Complete</a></li>
+
+        <li><a href="http://localhost:3000/forum">Forum</a></li>
+
+        <!-- This page should only be seen by the admin -->
+        <li><a href="http://localhost:3000/admin/results">Results</a></li>
+
+
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- End Navbar -->
+
+<body>
+  <style>
+  p {
+      padding: 2.0em;
+    }
+  </style>
+<%= yield %>
+
+</body>
+</html>

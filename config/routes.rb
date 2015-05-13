@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  get("/login", { :controller => "homepage", :action => "login"})
-  get("/advisor/homepage", { :controller => "homepage", :action => "advisorhomepage"})
-  get("/admin/homepage", { :controller => "homepage", :action => "adminhomepage"})
-  get("/advisor/survey", { :controller => "homepage", :action => "survey"})
-  get("/advisor/submissioncomplete", { :controller => "homepage", :action => "submissioncomplete"})
-  get("/admin/results", { :controller => "homepage", :action => "results"})
-  get("/forum", { :controller => "forum", :action => "forum"})
+  get("/login", { :controller => "homepages", :action => "login"})
+  get("/advisor/homepage", { :controller => "homepages", :action => "advisorhomepage"})
+  get("/admin/homepage", { :controller => "homepages", :action => "adminhomepage"})
+  get("/advisor/survey", { :controller => "surveys", :action => "survey"})
+  get("/advisor/submissioncomplete/:id", { :controller => "surveys", :action => "submissioncomplete"})
+  get("/advisor/complete", { :controller => "surveys", :action => "complete"})
+
+  get("/advisor/survey/:id", { :controller => "surveys", :action =>"show"})
+  get("/admin/results", { :controller => "surveys", :action => "results"})
+  get("/forum", { :controller => "forums", :action => "forum"})
+  get("/admin/index", { :controller => "surveys", :action => "index"})
 
 
   # The priority is based upon order of creation: first created -> highest priority.

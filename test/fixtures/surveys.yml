@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_feeling: MyString
+  customer_product: MyString
+  customer_issue: MyText
+  issue_resolved: false
+
+two:
+  customer_feeling: MyString
+  customer_product: MyString
+  customer_issue: MyText
+  issue_resolved: false

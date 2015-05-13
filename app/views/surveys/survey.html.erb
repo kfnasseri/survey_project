@@ -1,0 +1,94 @@
+<%= content_for :subtitle do %>
+Survey
+<% end %>
+
+
+<form action = 'http://localhost:3000/advisor/complete'>
+  <ol>
+    <li>How did the customer sound on the phone?</li>
+    <div class="radio">
+      <label>
+        <input type="radio" name="customer_feeling" id="customer_feeling1" value="Happy" checked>
+        Happy
+      </label>
+    </div>
+
+    <div class="radio">
+      <label>
+        <input type="radio" name="customer_feeling" id="customer_feeling2" value="Neutral" checked>
+        Neutral
+      </label>
+    </div>
+
+    <div class="radio">
+      <label>
+        <input type="radio" name="customer_feeling" id="customer_feeling3" value="Dissatisfied" checked>
+        Dissatisfied
+      </label>
+    </div>
+
+
+    <li>What product was the customer calling about?</li>
+    <div class="checkbox">
+      <label>
+        <input name="customer_product[]" type="checkbox" value="Orange">
+        Orange
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input name="customer_product[]" type="checkbox" value="Strawberry">
+        Strawberry
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input name="customer_product[]" type="checkbox" value="Pineapple">
+        Pineapple
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input name="customer_product[]" type="checkbox" value="Orange">
+        Orange
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input name="customer_product[]" type="checkbox" value="Banana">
+        Banana
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input name="customer_product[]" type="checkbox" value="Other">
+        Other
+      </label>
+    </div>
+
+    <li>Describe the issue with the product.</li>
+    <input name='customer_issue' type="text" class="form-control" id="exampleInputEmail1" placeholder="Describe the issue here...">
+
+    <li>Was the issue resolved?</li>
+    <div class="checkbox">
+      <label>
+        <input name="issue_resolved" type="checkbox" value="true">
+        Yes
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input name="issue_resolved" type="checkbox" value="false">
+        No
+      </label>
+    </div>
+  </ol>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
